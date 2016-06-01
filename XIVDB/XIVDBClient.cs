@@ -36,10 +36,6 @@ namespace XIVDB
 
             try
             {
-                foreach (var childElement in deserializedResponse.Children())
-                {
-                    Console.WriteLine(childElement.Path);
-                }
                 //Begin filling child element collections
                 results.Items = ResponseHelper.Deserialize<Item>(deserializedResponse.items);
                 results.Quests = ResponseHelper.Deserialize<Quest>(deserializedResponse.quests);
