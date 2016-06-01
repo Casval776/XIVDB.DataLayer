@@ -9,6 +9,7 @@ using XIVDB.Enums;
 using XIVDB.Model;
 using XIVDB.Static;
 using XIVDB.Helpers;
+using XIVDB.Exceptions;
 using Newtonsoft.Json;
 
 namespace XIVDB
@@ -29,33 +30,30 @@ namespace XIVDB
 
             //Start deserializing objects into return types
             var deserializedResponse = JsonConvert.DeserializeObject<dynamic>(response);
-            ResultType resultType = new ResultType();
+
+            //Instantiate result container
             Results results = new Results();
-            Quest quests = new Quest();
-            List<Item> resultItems = new List<Item>();
-            List<Quest> resultQuests = new List<Quest>();
+
             try
             {
-                //resultType = JsonConvert.DeserializeObject<ResultType>(deserializedResponse.ToString());
-                results = JsonConvert.DeserializeObject<Results>(deserializedResponse.items.ToString());
-
-                //Iterate through the collection of Items returned
-                foreach (var resultsChild in JsonConvert.DeserializeObject(deserializedResponse.items.results.ToString()).Children())
+                foreach (var childElement in deserializedResponse.Children())
                 {
-                    resultItems.Add(JsonConvert.DeserializeObject<Item>(resultsChild.ToString()));
+                    Console.WriteLine(childElement.Path);
                 }
-
-                //Iterate through the collection of Quests returned
-                foreach (var resultsChild in JsonConvert.DeserializeObject(deserializedResponse.quests.results.ToString()).Children())
-                {
-                    resultQuests.Add(JsonConvert.DeserializeObject<Quest>(resultsChild.ToString()));
-                }
-                results.ResultItems = resultItems;
-                resultType.Result = results;
+                //Begin filling child element collections
+                results.Items = ResponseHelper.Deserialize<Item>(deserializedResponse.items);
+                results.Quests = ResponseHelper.Deserialize<Quest>(deserializedResponse.quests);
+                results.Actions = ResponseHelper.Deserialize<Model.Action>(deserializedResponse.actions);
+                results.Achievements = ResponseHelper.Deserialize<Achievement>(deserializedResponse.achievements);
+                results.Recipes = ResponseHelper.Deserialize<Recipe>(deserializedResponse.recipes);
+                //resultType.Result = results;
             }
-            catch (Exception ex)
+            catch (APIErrorException apiex)
             {
                 //Do nothing
+                Console.WriteLine(apiex.Message);
+                if (apiex.InnerException != null) Console.WriteLine(apiex.InnerException.Message);
+                Console.ReadKey();
             }
 
             //Return Items

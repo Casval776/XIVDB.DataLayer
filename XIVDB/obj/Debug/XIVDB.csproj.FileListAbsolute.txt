@@ -7,3 +7,11 @@ C:\Users\Casval Zem Daikun\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\Newtonso
 C:\Users\Casval Zem Daikun\Source\Repos\XIVDB-DataLayer\XIVDB\obj\Debug\XIVDB.csprojResolveAssemblyReference.cache
 C:\Users\Casval Zem Daikun\Source\Repos\XIVDB-DataLayer\XIVDB\obj\Debug\XIVDB.exe
 C:\Users\Casval Zem Daikun\Source\Repos\XIVDB-DataLayer\XIVDB\obj\Debug\XIVDB.pdb
+C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIVDB.exe.config
+C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\obj\Debug\XIVDB.exe
+C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\obj\Debug\XIVDB.pdb
+C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIVDB.exe
+C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIVDB.pdb
+C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\Newtonsoft.Json.dll
+C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\Newtonsoft.Json.xml
+C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\obj\Debug\XIVDB.csprojResolveAssemblyReference.cache
