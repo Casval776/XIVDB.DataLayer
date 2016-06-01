@@ -1,1 +1,9 @@
 c:\users\casval zem daikun\documents\visual studio 2015\Projects\XIVDB\XIVDB\bin\Debug\XIVDB.exe.config
+C:\Users\Casval Zem Daikun\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIVDB.exe.config
+C:\Users\Casval Zem Daikun\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIVDB.exe
+C:\Users\Casval Zem Daikun\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIVDB.pdb
+C:\Users\Casval Zem Daikun\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Casval Zem Daikun\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Casval Zem Daikun\Source\Repos\XIVDB-DataLayer\XIVDB\obj\Debug\XIVDB.csprojResolveAssemblyReference.cache
+C:\Users\Casval Zem Daikun\Source\Repos\XIVDB-DataLayer\XIVDB\obj\Debug\XIVDB.exe
+C:\Users\Casval Zem Daikun\Source\Repos\XIVDB-DataLayer\XIVDB\obj\Debug\XIVDB.pdb

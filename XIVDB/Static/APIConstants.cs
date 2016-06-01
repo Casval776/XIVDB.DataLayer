@@ -11,18 +11,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XIVDB
+namespace XIVDB.Static
 {
-    class Program
+    public static class APIConstants
     {
-        public Program()
+        public struct URI
         {
-            XIVDBClient client = new XIVDBClient();
-            client.XIVDBQuery(Enums.SearchType.Items, " excalibur zenith ");
-        }
-        static void Main(string[] args)
-        {
-            new Program();
+            public const string APIURL = @"http://api.xivdb.com/search?";
+            public const string APIRequestMethod = "GET";
+            public const string APIRequestAccept = "application/json";
         }
     }
 }
