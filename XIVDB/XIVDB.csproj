@@ -50,6 +50,7 @@
     <Compile Include="Enums\SearchType.cs" />
     <Compile Include="Helpers\RequestHelper.cs" />
     <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\Quest.cs" />
     <Compile Include="Model\Results.cs" />
     <Compile Include="Model\ResultType.cs" />
     <Compile Include="Program.cs" />

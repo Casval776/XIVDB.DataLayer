@@ -12,5 +12,6 @@ namespace XIVDB.Model
         [JsonProperty("total")]
         public int Total { get; set; }
         public IEnumerable<Item> ResultItems { get; set; }
+        public IEnumerable<Quest> ResultQuests { get; set; }
     }
 }

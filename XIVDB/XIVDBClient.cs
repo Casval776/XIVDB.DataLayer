@@ -31,15 +31,24 @@ namespace XIVDB
             var deserializedResponse = JsonConvert.DeserializeObject<dynamic>(response);
             ResultType resultType = new ResultType();
             Results results = new Results();
+            Quest quests = new Quest();
             List<Item> resultItems = new List<Item>();
+            List<Quest> resultQuests = new List<Quest>();
             try
             {
-                resultType = JsonConvert.DeserializeObject<ResultType>(deserializedResponse.ToString());
+                //resultType = JsonConvert.DeserializeObject<ResultType>(deserializedResponse.ToString());
                 results = JsonConvert.DeserializeObject<Results>(deserializedResponse.items.ToString());
 
+                //Iterate through the collection of Items returned
                 foreach (var resultsChild in JsonConvert.DeserializeObject(deserializedResponse.items.results.ToString()).Children())
                 {
                     resultItems.Add(JsonConvert.DeserializeObject<Item>(resultsChild.ToString()));
+                }
+
+                //Iterate through the collection of Quests returned
+                foreach (var resultsChild in JsonConvert.DeserializeObject(deserializedResponse.quests.results.ToString()).Children())
+                {
+                    resultQuests.Add(JsonConvert.DeserializeObject<Quest>(resultsChild.ToString()));
                 }
                 results.ResultItems = resultItems;
                 resultType.Result = results;
