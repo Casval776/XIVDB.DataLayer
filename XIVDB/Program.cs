@@ -17,8 +17,12 @@ namespace XIVDB
     {
         public Program()
         {
-            XIVDBClient client = new XIVDBClient();
-            client.XIVDBQuery(Enums.SearchType.Text, " excalibur zenith ");
+            XIVDBClient client = XIVDBClient.Instance;
+            string searchTerm = " gae bolg ";
+            foreach (Enums.SearchType x in Enum.GetValues(typeof(Enums.SearchType)))
+            {
+                client.XIVDBQuery(x, searchTerm);
+            }
         }
         static void Main(string[] args)
         {

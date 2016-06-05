@@ -22,7 +22,11 @@ namespace XIVDB.Helpers
         /// <returns></returns>
         public static string PrepareQueryString(SearchType searchType, string rawValue)
         {
-            return (searchType.ToString() + "=" + rawValue.Trim().Replace(' ', APIConstants.URI.WhitespaceDelimiter));
+            return (
+                (searchType.ToString() == SearchType.Text.ToString() ? 
+                "string" 
+                : searchType.ToString()) + 
+                "=" + rawValue.Trim().Replace(' ', APIConstants.URI.WhitespaceDelimiter));
         }
         #endregion
     }

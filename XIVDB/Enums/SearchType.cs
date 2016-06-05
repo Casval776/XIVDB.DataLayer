@@ -9,8 +9,8 @@ namespace XIVDB.Enums
     public enum SearchType
     {
         one,
-        Text,
-        Items,
+        Text
+        /*Items,
         Quests,
         Achievements,
         recipes,
@@ -25,6 +25,6 @@ namespace XIVDB.Enums
         Status,
         Titles,
         Minions,
-        Mounts
+        Mounts*/
     }
 }

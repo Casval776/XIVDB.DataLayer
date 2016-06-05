@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\SearchType.cs" />
-    <Compile Include="Exceptions\APIErrorException.cs" />
     <Compile Include="Helpers\RequestHelper.cs" />
     <Compile Include="Helpers\ResponseHelper.cs" />
     <Compile Include="Interfaces\IXIVDBObject.cs" />

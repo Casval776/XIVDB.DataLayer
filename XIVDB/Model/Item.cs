@@ -14,6 +14,8 @@ namespace XIVDB.Model
     public class Item : IXIVDBObject
     {
         #region Properties
+        [JsonProperty("id")]
+        public string Id { get; set; }
         [JsonProperty("name")]
         public string name { get; set; }
         [JsonProperty("help")]
