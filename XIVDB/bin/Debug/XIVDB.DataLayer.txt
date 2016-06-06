@@ -1,0 +1,2 @@
+﻿INFO - Beginning query at [6/6/2016 4:40:53 PM] on Query [one] with params [ gae bolg ]
+INFO - Beginning query at [6/6/2016 4:40:54 PM] on Query [Text] with params [ gae bolg ]

@@ -10,16 +10,19 @@ using XIVDB.Model;
 using XIVDB.Static;
 using XIVDB.Helpers;
 using Newtonsoft.Json;
+using log4net;
+using log4net.Config;
 
 namespace XIVDB
 {
     public sealed class XIVDBClient
     {
+        private static readonly ILog log = log4net.LogManager.GetLogger("XIVDB");//typeof(XIVDBClient));
         //Singleton Instance
         private static readonly XIVDBClient instance = new XIVDBClient();
         private XIVDBClient()
         {
-
+            XmlConfigurator.Configure();
         }
 
         static XIVDBClient()
@@ -37,6 +40,8 @@ namespace XIVDB
 
         public Results XIVDBQuery(SearchType searchType, string query)
         {
+            XmlConfigurator.Configure();
+            log.Info("Beginning query at [" + DateTime.Now + "] on Query [" + searchType.ToString() + "] with params [" + query + "]");
             //For the time being, treat all queries as full text
             //This does not take search prefixes into account
             //Query XIVDB API
