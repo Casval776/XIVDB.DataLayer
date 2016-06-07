@@ -1,2 +1,15 @@
 ﻿INFO - Beginning query at [6/6/2016 4:40:53 PM] on Query [one] with params [ gae bolg ]
 INFO - Beginning query at [6/6/2016 4:40:54 PM] on Query [Text] with params [ gae bolg ]
+INFO - Beginning query at [6/7/2016 2:49:19 PM] on Query [one] with params [ gae bolg ]
+INFO - Beginning query at [6/7/2016 2:49:20 PM] on Query [Text] with params [ gae bolg ]
+INFO - XIVDBClient instantiated at [6/7/2016 3:29:52 PM]
+INFO - XIVDBClient Instance requested at [6/7/2016 3:29:52 PM]
+INFO - [6/7/2016 3:29:59 PM] - Beginning query on Query Type [one] with params [ gae bolg ]
+INFO - [6/7/2016 3:30:09 PM] - Sending request to API.
+Details: http://api.xivdb.com/search?one=gae+bolg
+INFO - [6/7/2016 3:30:22 PM] - Response received from API. Performing cleanup...
+INFO - [6/7/2016 3:30:28 PM] - Response deserialization finished at 
+INFO - [6/7/2016 3:30:48 PM] - Beginning query on Query Type [Text] with params [ gae bolg ]
+INFO - [6/7/2016 3:30:48 PM] - Sending request to API.
+Details: http://api.xivdb.com/search?string=gae+bolg
+INFO - [6/7/2016 3:30:48 PM] - Response received from API. Performing cleanup...

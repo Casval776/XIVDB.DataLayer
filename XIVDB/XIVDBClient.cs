@@ -17,12 +17,13 @@ namespace XIVDB
 {
     public sealed class XIVDBClient
     {
-        private static readonly ILog log = log4net.LogManager.GetLogger("XIVDB");//typeof(XIVDBClient));
+        private static readonly ILog log = log4net.LogManager.GetLogger(typeof(XIVDBClient));
         //Singleton Instance
         private static readonly XIVDBClient instance = new XIVDBClient();
         private XIVDBClient()
         {
             XmlConfigurator.Configure();
+            log.Info("[" + DateTime.Now + "] - XIVDBClient instantiated.");
         }
 
         static XIVDBClient()
@@ -34,14 +35,14 @@ namespace XIVDB
         {
             get
             {
+                log.Info("[" + DateTime.Now + "] - XIVDBClient Instance requested.");
                 return instance;
             }
         }
 
         public Results XIVDBQuery(SearchType searchType, string query)
         {
-            XmlConfigurator.Configure();
-            log.Info("Beginning query at [" + DateTime.Now + "] on Query [" + searchType.ToString() + "] with params [" + query + "]");
+            log.Info("[" + DateTime.Now + "] - Beginning query on Query Type [" + searchType.ToString() + "] with params [" + query + "]");
             //For the time being, treat all queries as full text
             //This does not take search prefixes into account
             //Query XIVDB API
@@ -123,10 +124,14 @@ namespace XIVDB
                             break;
                     }
                 }
+                log.Info("[" + DateTime.Now + "] - Response deserialization finished");
             }
             catch (Exception ex)
             {
                 //Do nothing
+                log.Error("[" + DateTime.Now + "] - Error Encountered in [XIVDBClient.XIVDBQuery]\nDetails: " + ex.Message + 
+                    "\n\nInner Details: " + 
+                    (ex.InnerException.Message == null ? "No Data..." : ex.InnerException.Message));
             }
 
             //Return Items
@@ -150,6 +155,8 @@ namespace XIVDB
                 apiRequest.Method = APIConstants.URI.APIRequestMethod;
                 apiRequest.Accept = APIConstants.URI.APIRequestAccept;
 
+                log.Info("[" + DateTime.Now + "] - Sending request to API.\nDetails: " + apiRequest.RequestUri);
+
                 string response = string.Empty;
                 apiResponse = (HttpWebResponse)apiRequest.GetResponse();
                 using (reader = new StreamReader(apiResponse.GetResponseStream()))
@@ -161,6 +168,10 @@ namespace XIVDB
             catch (Exception ex)
             {
                 //Probably should create logging here
+                //Logging magic!
+                log.Error("[" + DateTime.Now + "] - Error Encountered in [XIVDBClient.Query]\nDetails: " + ex.Message +
+                    "\n\nInner Details: " +
+                    (ex.InnerException.Message == null ? "No Data..." : ex.InnerException.Message));
                 return string.Empty;
             }
             finally
@@ -168,8 +179,9 @@ namespace XIVDB
                 //Clean up variables
                 if (reader != null) reader.Dispose();
                 if (apiResponse != null) apiResponse.Dispose();
-            }
 
+                log.Info("[" + DateTime.Now + "] - Response received from API. Performing cleanup...");
+            }
         }
     }
 }

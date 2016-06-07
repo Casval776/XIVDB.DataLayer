@@ -7,6 +7,7 @@ using XIVDB.Model;
 using XIVDB.Interfaces;
 using Newtonsoft.Json;
 using XIVDB.Model.DataType;
+using log4net;
 
 namespace XIVDB.Helpers
 {
@@ -16,6 +17,10 @@ namespace XIVDB.Helpers
     /// </summary>
     public static class ResponseHelper
     {
+        #region Private Variables
+        private static readonly ILog log = log4net.LogManager.GetLogger(typeof(ResponseHelper));
+        #endregion
+
         #region Public Functions
         /// <summary>
         /// Function used to deserialize objects from raw JSON into a ResultList object.
@@ -29,6 +34,7 @@ namespace XIVDB.Helpers
             ResultList<T> resultList = new ResultList<T>();
             try
             {
+                log.Info("[" + DateTime.Now + "] - Beginning deserialization of [" + jsonString.results.Count + "] objects of type [" + typeof(T).ToString() + "]");
                 //Iterate through child elements to build result set
                 foreach (var resultsChild in jsonString.results.Children())
                 {
@@ -38,10 +44,13 @@ namespace XIVDB.Helpers
                 //Grab total and paging data
                 resultList.Paging.Total = Convert.ToInt32(JsonConvert.DeserializeObject<int>(jsonString.total.ToString()));
                 resultList.Paging = JsonConvert.DeserializeObject<Paging>(jsonString.paging.ToString());
+                log.Info("[" + DateTime.Now + "] - Finished deserialization");
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                //Do logging here
+                log.Error("[" + DateTime.Now + "] - Error Encountered in [ResponseHelper]\nDetails: " + ex.Message +
+                    "\n\nInner Details: " +
+                    (ex.InnerException.Message == null ? "No Data..." : ex.InnerException.Message));
                 return resultList;
             }
             //Return result
