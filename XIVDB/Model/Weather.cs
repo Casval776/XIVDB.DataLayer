@@ -1,8 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+//-------------------------------------------------------
+//
+//      Copyright (c) 2016 All Rights Reserved
+//          Daikun Industries LLC
+//
+//-------------------------------------------------------
+
 using Newtonsoft.Json;
 using XIVDB.Interfaces;
 
@@ -11,7 +14,7 @@ namespace XIVDB.Model
     /// <summary>
     /// Model class for Weather data types
     /// </summary>
-    public class Weather : IXIVDBObject
+    public class Weather : IXivdbObject
     {
         #region Properties
         [JsonProperty("id")]

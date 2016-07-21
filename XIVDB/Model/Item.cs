@@ -1,9 +1,13 @@
-﻿using Newtonsoft.Json;
+﻿
+//-------------------------------------------------------
+//
+//      Copyright (c) 2016 All Rights Reserved
+//          Daikun Industries LLC
+//
+//-------------------------------------------------------
+
+using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using XIVDB.Interfaces;
 
 namespace XIVDB.Model
@@ -11,7 +15,7 @@ namespace XIVDB.Model
     /// <summary>
     /// Model class for Item data types
     /// </summary>
-    public class Item : IXIVDBObject
+    public class Item : IXivdbObject
     {
         #region Properties
         [JsonProperty("id")]

@@ -1,31 +1,25 @@
-﻿//--------------------------------------------
+﻿//-------------------------------------------------------
 //
 //      Copyright (c) 2016 All Rights Reserved
 //          Daikun Industries LLC
 //
-//--------------------------------------------
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+//-------------------------------------------------------
 
 namespace XIVDB.Static
 {
     /// <summary>
     /// Public Struct class used to hold constant values used throughout the DataLayer
     /// </summary>
-    public static class APIConstants
+    public static class ApiConstants
     {
         /// <summary>
         /// Holds URI-related constant values
         /// </summary>
-        public struct URI
+        public struct Uri
         {
-            public const string APIURL = @"http://api.xivdb.com/search?";
-            public const string APIRequestMethod = "GET";
-            public const string APIRequestAccept = "application/json";
+            public const string ApiUrl = @"http://api.xivdb.com/search?";
+            public const string ApiRequestMethod = "GET";
+            public const string ApiRequestAccept = "application/json";
             public const char WhitespaceDelimiter = '+';
         }
 
@@ -40,11 +34,11 @@ namespace XIVDB.Static
             public const string Achievements = "achievements";
             public const string Recipes = "recipes";
             public const string Instances = "instances";
-            public const string FATEs = "fates";
+            public const string Fates = "fates";
             public const string Leves = "leves";
             public const string Places = "places";
             public const string Gathering = "gathering";
-            public const string NPCs = "npcs";
+            public const string Npcs = "npcs";
             public const string Enemies = "enemies";
             public const string Emotes = "emotes";
             public const string Status = "status";

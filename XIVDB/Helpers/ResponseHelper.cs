@@ -1,9 +1,13 @@
-﻿using System;
+﻿
+//-------------------------------------------------------
+//
+//      Copyright (c) 2016 All Rights Reserved
+//          Daikun Industries LLC
+//
+//-------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using XIVDB.Model;
 using XIVDB.Interfaces;
 using Newtonsoft.Json;
 using XIVDB.Model.DataType;
@@ -18,7 +22,7 @@ namespace XIVDB.Helpers
     public static class ResponseHelper
     {
         #region Private Variables
-        private static readonly ILog log = log4net.LogManager.GetLogger(typeof(ResponseHelper));
+        private static readonly ILog Log = LogManager.GetLogger(typeof(ResponseHelper));
         #endregion
 
         #region Public Functions
@@ -28,13 +32,13 @@ namespace XIVDB.Helpers
         /// <typeparam name="T">The IXIVDBObject type</typeparam>
         /// <param name="jsonString">The Dynamic Object created during response read</param>
         /// <returns>ResultList of type T, where T is an IXIVDBObject</returns>
-        public static IEnumerable<T> Deserialize<T>(dynamic jsonString) where T : IXIVDBObject
+        public static IEnumerable<T> Deserialize<T>(dynamic jsonString) where T : IXivdbObject
         {
             //Instantiate container
             ResultList<T> resultList = new ResultList<T>();
             try
             {
-                log.Info("[" + DateTime.Now + "] - Beginning deserialization of [" + jsonString.results.Count + "] objects of type [" + typeof(T).ToString() + "]");
+                Log.Info("[" + DateTime.Now + "] - Beginning deserialization of [" + jsonString.results.Count + "] objects of type [" + typeof(T).ToString() + "]");
                 //Iterate through child elements to build result set
                 foreach (var resultsChild in jsonString.results.Children())
                 {
@@ -44,13 +48,13 @@ namespace XIVDB.Helpers
                 //Grab total and paging data
                 resultList.Paging.Total = Convert.ToInt32(JsonConvert.DeserializeObject<int>(jsonString.total.ToString()));
                 resultList.Paging = JsonConvert.DeserializeObject<Paging>(jsonString.paging.ToString());
-                log.Info("[" + DateTime.Now + "] - Finished deserialization");
+                Log.Info("[" + DateTime.Now + "] - Finished deserialization");
             }
             catch (Exception ex)
             {
-                log.Error("[" + DateTime.Now + "] - Error Encountered in [ResponseHelper]\nDetails: " + ex.Message +
+                Log.Error("[" + DateTime.Now + "] - Error Encountered in [ResponseHelper]\nDetails: " + ex.Message +
                     "\n\nInner Details: " +
-                    (ex.InnerException.Message == null ? "No Data..." : ex.InnerException.Message));
+                    (ex.InnerException.Message));
                 return resultList;
             }
             //Return result

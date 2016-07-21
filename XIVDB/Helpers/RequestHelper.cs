@@ -1,8 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+//-------------------------------------------------------
+//
+//      Copyright (c) 2016 All Rights Reserved
+//          Daikun Industries LLC
+//
+//-------------------------------------------------------
+
 using XIVDB.Enums;
 using XIVDB.Static;
 
@@ -26,7 +29,7 @@ namespace XIVDB.Helpers
                 (searchType.ToString() == SearchType.Text.ToString() ? 
                 "string" 
                 : searchType.ToString()) + 
-                "=" + rawValue.Trim().Replace(' ', APIConstants.URI.WhitespaceDelimiter));
+                "=" + rawValue.Trim().Replace(' ', ApiConstants.Uri.WhitespaceDelimiter));
         }
         #endregion
     }

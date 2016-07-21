@@ -1,9 +1,12 @@
-﻿using System;
+﻿
+//-------------------------------------------------------
+//
+//      Copyright (c) 2016 All Rights Reserved
+//          Daikun Industries LLC
+//
+//-------------------------------------------------------
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using XIVDB.Interfaces;
 
 namespace XIVDB.Model.DataType
 {
