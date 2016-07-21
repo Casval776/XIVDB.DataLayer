@@ -35,7 +35,7 @@ namespace XIVDB.Helpers
         public static IEnumerable<T> Deserialize<T>(dynamic jsonString) where T : IXivdbObject
         {
             //Instantiate container
-            ResultList<T> resultList = new ResultList<T>();
+            var resultList = new ResultList<T>();
             try
             {
                 Log.Info("[" + DateTime.Now + "] - Beginning deserialization of [" + jsonString.results.Count + "] objects of type [" + typeof(T).ToString() + "]");

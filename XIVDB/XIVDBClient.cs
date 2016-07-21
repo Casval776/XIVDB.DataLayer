@@ -57,7 +57,7 @@ namespace XIVDB
             var deserializedResponse = JsonConvert.DeserializeObject<dynamic>(response);
 
             //Instantiate result container
-            Results results = new Results();
+            var results = new Results();
 
             try
             {
@@ -156,7 +156,7 @@ namespace XIVDB
             try
             {
                 //Set request properties
-                HttpWebRequest apiRequest = (HttpWebRequest)WebRequest.Create(ApiConstants.Uri.ApiUrl + query);
+                var apiRequest = (HttpWebRequest)WebRequest.Create(ApiConstants.Uri.ApiUrl + query);
                 apiRequest.Method = ApiConstants.Uri.ApiRequestMethod;
                 apiRequest.Accept = ApiConstants.Uri.ApiRequestAccept;
 
@@ -183,8 +183,8 @@ namespace XIVDB
             finally
             {
                 //Clean up variables
-                if (reader != null) reader.Dispose();
-                if (apiResponse != null) apiResponse.Dispose();
+                reader?.Dispose();
+                apiResponse?.Dispose();
 
                 Log.Info("[" + DateTime.Now + "] - Response received from API. Performing cleanup...");
             }
