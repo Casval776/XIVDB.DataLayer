@@ -16,6 +16,7 @@ using XIVDB.Helpers;
 using Newtonsoft.Json;
 using log4net;
 using log4net.Config;
+using XIVDB.Model.DataType;
 
 namespace XIVDB
 {

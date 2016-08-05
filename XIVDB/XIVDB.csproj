@@ -78,7 +78,7 @@
     <Compile Include="Model\Place.cs" />
     <Compile Include="Model\Quest.cs" />
     <Compile Include="Model\Recipe.cs" />
-    <Compile Include="Model\Results.cs" />
+    <Compile Include="Model\DataType\Results.cs" />
     <Compile Include="Model\Status.cs" />
     <Compile Include="Model\Title.cs" />
     <Compile Include="Model\Weather.cs" />

@@ -36,7 +36,7 @@ namespace XIVDB.Model
         public string NameDe { get; set; }
 
         [JsonProperty("name_ch")]
-        public object NameCh { get; set; }
+        public string NameCh { get; set; }
 
         [JsonProperty("icon")]
         public string Icon { get; set; }

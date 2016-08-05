@@ -30,7 +30,7 @@ namespace XIVDB.Model
         [JsonProperty("name_de")]
         public string name_de { get; set; }
         [JsonProperty("name_ch")]
-        public object name_ch { get; set; }
+        public string name_ch { get; set; }
         [JsonProperty("class_level")]
         public int class_level { get; set; }
         [JsonProperty("assignment_type_name")]

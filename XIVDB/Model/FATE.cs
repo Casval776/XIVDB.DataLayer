@@ -30,13 +30,13 @@ namespace XIVDB.Model
         [JsonProperty("name_de")]
         public string name_de { get; set; }
         [JsonProperty("name_ch")]
-        public object name_ch { get; set; }
+        public string name_ch { get; set; }
         [JsonProperty("class_level")]
         public int class_level { get; set; }
         [JsonProperty("icon")]
         public string icon { get; set; }
         [JsonProperty("placename")]
-        public object placename { get; set; }
+        public string placename { get; set; }
         [JsonProperty("url")]
         public string url { get; set; }
         [JsonProperty("url_api")]

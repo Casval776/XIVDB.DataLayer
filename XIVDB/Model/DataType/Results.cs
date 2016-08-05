@@ -8,7 +8,7 @@
 
 using XIVDB.Model.DataType;
 
-namespace XIVDB.Model
+namespace XIVDB.Model.DataType
 {
     /// <summary>
     /// Container Model for all IXIVDBObjects returned by the
