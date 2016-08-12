@@ -13,3 +13,4 @@ INFO - [6/7/2016 3:30:48 PM] - Beginning query on Query Type [Text] with params 
 INFO - [6/7/2016 3:30:48 PM] - Sending request to API.
 Details: http://api.xivdb.com/search?string=gae+bolg
 INFO - [6/7/2016 3:30:48 PM] - Response received from API. Performing cleanup...
+DEBUG - [8/12/2016 1:35:48 PM] - [XivdbClient : .ctor] - Testing

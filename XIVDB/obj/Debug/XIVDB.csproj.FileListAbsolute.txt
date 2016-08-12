@@ -14,9 +14,6 @@ C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\Newtonsoft.Json.xml
 C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\obj\Debug\XIVDB.csprojResolveAssemblyReference.cache
 C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\log4net.dll
 C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\log4net.xml
-C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIVDB.dll.config
-C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIVDB.dll
-C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\obj\Debug\XIVDB.dll
 C:\Source\XIVDB.DataLayer\XIVDB\bin\Debug\XIVDB.dll.config
 C:\Source\XIVDB.DataLayer\XIVDB\bin\Debug\XIVDB.dll
 C:\Source\XIVDB.DataLayer\XIVDB\bin\Debug\XIVDB.pdb
@@ -27,3 +24,8 @@ C:\Source\XIVDB.DataLayer\XIVDB\bin\Debug\Newtonsoft.Json.xml
 C:\Source\XIVDB.DataLayer\XIVDB\obj\Debug\XIVDB.csprojResolveAssemblyReference.cache
 C:\Source\XIVDB.DataLayer\XIVDB\obj\Debug\XIVDB.dll
 C:\Source\XIVDB.DataLayer\XIVDB\obj\Debug\XIVDB.pdb
+C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIVDB.exe.config
+C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIVDB.exe
+C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIV.Logger.dll
+C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIV.Logger.pdb
+C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\obj\Debug\XIVDB.exe

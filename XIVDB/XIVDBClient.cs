@@ -1,5 +1,4 @@
-﻿
-//-------------------------------------------------------
+﻿//-------------------------------------------------------
 //
 //      Copyright (c) 2016 All Rights Reserved
 //          Daikun Industries LLC
@@ -14,41 +13,36 @@ using XIVDB.Model;
 using XIVDB.Static;
 using XIVDB.Helpers;
 using Newtonsoft.Json;
-using log4net;
-using log4net.Config;
+using XIV.Global.Handler;
+using XIV.Global.Log;
 using XIVDB.Model.DataType;
 
 namespace XIVDB
 {
     public sealed class XivdbClient
     {
-        private static readonly ILog Log = LogManager.GetLogger(typeof(XivdbClient));
+        #region Private Members
+        private readonly Logger _log;
         //Singleton Instance
-        // ReSharper disable once InconsistentNaming
-        private static readonly XivdbClient _instance = new XivdbClient();
+        private static readonly Lazy<XivdbClient> Instance = new Lazy<XivdbClient>(() => new XivdbClient());
+        #endregion
+
+        #region Constructors
         private XivdbClient()
         {
-            XmlConfigurator.Configure();
-            Log.Info("[" + DateTime.Now + "] - XIVDBClient instantiated.");
+            _log = new Logger(this);
         }
 
         static XivdbClient()
         {
 
         }
+        #endregion
 
-        public static XivdbClient Instance
-        {
-            get
-            {
-                Log.Info("[" + DateTime.Now + "] - XIVDBClient Instance requested.");
-                return _instance;
-            }
-        }
-
+        #region Public Methods
         public Results XivdbQuery(SearchType searchType, string query)
         {
-            Log.Info("[" + DateTime.Now + "] - Beginning query on Query Type [" + searchType.ToString() + "] with params [" + query + "]");
+            _log.Info($"Beginning query on Query Type [{searchType}] with params [{query}]");
             //For the time being, treat all queries as full text
             //This does not take search prefixes into account
             //Query XIVDB API
@@ -84,7 +78,7 @@ namespace XIVDB
                             results.Enemies = ResponseHelper.Deserialize<Enemy>(deserializedResponse.enemies);
                             break;
                         case ApiConstants.ReturnNode.Fates:
-                            results.FATEs = ResponseHelper.Deserialize<Fate>(deserializedResponse.fates);
+                            results.Fates = ResponseHelper.Deserialize<Fate>(deserializedResponse.fates);
                             break;
                         case ApiConstants.ReturnNode.Gathering:
                             results.Gathering = ResponseHelper.Deserialize<Gathering>(deserializedResponse.gathering);
@@ -105,7 +99,7 @@ namespace XIVDB
                             results.Mounts = ResponseHelper.Deserialize<Mount>(deserializedResponse.mounts);
                             break;
                         case ApiConstants.ReturnNode.Npcs:
-                            results.NPCs = ResponseHelper.Deserialize<Npc>(deserializedResponse.npcs);
+                            results.Npcs = ResponseHelper.Deserialize<Npc>(deserializedResponse.npcs);
                             break;
                         case ApiConstants.ReturnNode.Places:
                             results.Places = ResponseHelper.Deserialize<Place>(deserializedResponse.places);
@@ -126,24 +120,30 @@ namespace XIVDB
                             results.Weathers = ResponseHelper.Deserialize<Weather>(deserializedResponse.weather);
                             break;
                         //Default case in case a new return type is introduced
-                        default: Log.Info("[" + DateTime.Now + "] - New item type introduced: " + nodeType);
+                        default:
+                            _log.Info($"Unknown ReturnNode type - [{nodeType}]");
                             break;
                     }
                 }
-                Log.Info("[" + DateTime.Now + "] - Response deserialization finished");
+                _log.Info($"Response deserialization finished.");
             }
             catch (Exception ex)
             {
-                //Do nothing
-                Log.Error("[" + DateTime.Now + "] - Error Encountered in [XIVDBClient.XIVDBQuery]\nDetails: " + ex.Message + 
-                    "\n\nInner Details: " + 
-                    (ex.InnerException.Message));
+                ExceptionHandler.HandleException(ex);
             }
 
             //Return Items
             return results;
         }
 
+        /// <summary>
+        /// Returns new instance of XivdbClient
+        /// </summary>
+        /// <returns>New or existing XivdbClient Instance</returns>
+        public static XivdbClient GetInstance() { return Instance.Value; }
+        #endregion
+
+        #region Private Methods
         /// <summary>
         /// Configures the request and sends it to the XIVDB API.
         /// </summary>
@@ -161,7 +161,7 @@ namespace XIVDB
                 apiRequest.Method = ApiConstants.Uri.ApiRequestMethod;
                 apiRequest.Accept = ApiConstants.Uri.ApiRequestAccept;
 
-                Log.Info("[" + DateTime.Now + "] - Sending request to API.\nDetails: " + apiRequest.RequestUri);
+                _log.Info($"Sending request to API.{Environment.NewLine}Details: [{apiRequest.RequestUri}]");
 
                 string response;
                 apiResponse = (HttpWebResponse)apiRequest.GetResponse();
@@ -174,11 +174,7 @@ namespace XIVDB
             }
             catch (Exception ex)
             {
-                //Probably should create logging here
-                //Logging magic!
-                Log.Error("[" + DateTime.Now + "] - Error Encountered in [XIVDBClient.Query]\nDetails: " + ex.Message +
-                    "\n\nInner Details: " +
-                    (ex.InnerException.Message));
+                ExceptionHandler.HandleException(ex);
                 return string.Empty;
             }
             finally
@@ -187,8 +183,10 @@ namespace XIVDB
                 reader?.Dispose();
                 apiResponse?.Dispose();
 
-                Log.Info("[" + DateTime.Now + "] - Response received from API. Performing cleanup...");
+                //Log because why not
+                _log.Info("Response received from API. Performing cleanup...");
             }
         }
+        #endregion
     }
 }
