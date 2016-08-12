@@ -6,6 +6,8 @@
 //
 //-------------------------------------------------------
 
+using Newtonsoft.Json;
+
 namespace XIVDB.Interfaces
 {
     /// <summary>
@@ -13,6 +15,8 @@ namespace XIVDB.Interfaces
     /// </summary>
     public interface IXivdbObject
     {
+        [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
+        int? Id { get; set; }
         //@TODO: Probably add something here? I dunno.
     }
 }

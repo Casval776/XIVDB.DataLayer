@@ -18,59 +18,59 @@ namespace XIVDB.Model
     {
         #region Properties
         [JsonProperty("id")]
-        public int? id { get; set; }
+        public int? Id { get; set; }
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string Name { get; set; }
         [JsonProperty("name_ja")]
-        public string name_ja { get; set; }
+        public string NameJa { get; set; }
         [JsonProperty("name_en")]
-        public string name_en { get; set; }
+        public string NameEn { get; set; }
         [JsonProperty("name_fr")]
-        public string name_fr { get; set; }
+        public string NameFr { get; set; }
         [JsonProperty("name_de")]
-        public string name_de { get; set; }
+        public string NameDe { get; set; }
         [JsonProperty("name_ch")]
-        public string name_ch { get; set; }
+        public string NameCh { get; set; }
         [JsonProperty("item")]
-        public int? item { get; set; }
+        public int? Item { get; set; }
         [JsonProperty("level")]
-        public int? level { get; set; }
+        public int? Level { get; set; }
         [JsonProperty("level_view")]
-        public int? level_view { get; set; }
+        public int? LevelView { get; set; }
         [JsonProperty("level_diff")]
-        public int? level_diff { get; set; }
+        public int? LevelDiff { get; set; }
         [JsonProperty("type_name")]
-        public string type_name { get; set; }
+        public string TypeName { get; set; }
         [JsonProperty("item_level_equip")]
-        public int? item_level_equip { get; set; }
+        public int? ItemLevelEquip { get; set; }
         [JsonProperty("item_level_item")]
-        public int? item_level_item { get; set; }
+        public int? ItemLevelItem { get; set; }
         [JsonProperty("rarity")]
-        public int? rarity { get; set; }
+        public int? Rarity { get; set; }
         [JsonProperty("icon")]
-        public string icon { get; set; }
+        public string Icon { get; set; }
         [JsonProperty("icon_lodestone")]
-        public string icon_lodestone { get; set; }
+        public string IconLodestone { get; set; }
         [JsonProperty("url")]
-        public string url { get; set; }
+        public string Url { get; set; }
         [JsonProperty("url_api")]
-        public string url_api { get; set; }
+        public string UrlApi { get; set; }
         [JsonProperty("url_xivdb")]
-        public string url_xivdb { get; set; }
+        public string UrlXivdb { get; set; }
         [JsonProperty("url_xivdb_ja")]
-        public string url_xivdb_ja { get; set; }
+        public string UrlXivdbJa { get; set; }
         [JsonProperty("url_xivdb_fr")]
-        public string url_xivdb_fr { get; set; }
+        public string UrlXivdbFr { get; set; }
         [JsonProperty("url_xivdb_de")]
-        public string url_xivdb_de { get; set; }
+        public string UrlXivdbDe { get; set; }
         [JsonProperty("url_type")]
-        public string url_type { get; set; }
+        public string UrlType { get; set; }
         [JsonProperty("color")]
-        public string color { get; set; }
+        public string Color { get; set; }
         [JsonProperty("stars")]
-        public int? stars { get; set; }
+        public int? Stars { get; set; }
         [JsonProperty("stars_html")]
-        public string stars_html { get; set; }
+        public string StarsHtml { get; set; }
         #endregion
     }
 }

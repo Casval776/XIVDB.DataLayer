@@ -19,9 +19,9 @@ namespace XIVDB.Model
     {
         #region Properties
         [JsonProperty("id")]
-        public string Id { get; set; }
+        public int? Id { get; set; }
         [JsonProperty("name")]
-        public string name { get; set; }
+        public string Name { get; set; }
         [JsonProperty("help")]
         public string Help { get; set; }
         [JsonProperty("noun")]
@@ -41,7 +41,7 @@ namespace XIVDB.Model
         [JsonProperty("rarity", NullValueHandling = NullValueHandling.Ignore)]
         public int? Rarity { get; set; }
         [JsonProperty("hq")]
-        public bool HQ { get; set; }
+        public bool Hq { get; set; }
         [JsonProperty("special_bonus_id", NullValueHandling = NullValueHandling.Ignore)]
         public int? SpecialBonusId { get; set; }
         [JsonProperty("series_id", NullValueHandling = NullValueHandling.Ignore)]
@@ -61,7 +61,7 @@ namespace XIVDB.Model
         [JsonProperty("price_sell", NullValueHandling = NullValueHandling.Ignore)]
         public int? PriceSell { get; set; }
         [JsonProperty("price_sell_hq", NullValueHandling = NullValueHandling.Ignore)]
-        public int? PriceSellHQ { get; set; }
+        public int? PriceSellHq { get; set; }
         [JsonProperty("mirage_item_id", NullValueHandling = NullValueHandling.Ignore)]
         public int? MirageItemId { get; set; }
         [JsonProperty("icon_local", NullValueHandling = NullValueHandling.Ignore)]
@@ -69,7 +69,7 @@ namespace XIVDB.Model
         [JsonProperty("icon_lodestone")]
         public string IconLodestone { get; set; }
         [JsonProperty("icon_lodestone_hq")]
-        public string IconLodestoneHQ { get; set; }
+        public string IconLodestoneHq { get; set; }
         [JsonProperty("salvage", NullValueHandling = NullValueHandling.Ignore)]
         public int? Salvage { get; set; }
         [JsonProperty("materia_slots", NullValueHandling = NullValueHandling.Ignore)]
@@ -191,7 +191,7 @@ namespace XIVDB.Model
         [JsonProperty("icon")]
         public string Icon { get; set; }
         [JsonProperty("icon_hq")]
-        public string IconHQ { get; set; }
+        public string IconHq { get; set; }
         #endregion
     }
 }

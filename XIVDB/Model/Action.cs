@@ -22,15 +22,15 @@ namespace XIVDB.Model
         [JsonProperty("name")]
         public string Name { get; set; }
         [JsonProperty("name_ja")]
-        public string Name_Ja { get; set; }
+        public string NameJa { get; set; }
         [JsonProperty("name_en")]
-        public string Name_En { get; set; }
+        public string NameEn { get; set; }
         [JsonProperty("name_fr")]
-        public string Name_Fr { get; set; }
+        public string NameFr { get; set; }
         [JsonProperty("name_de")]
-        public string Name_De { get; set; }
+        public string NameDe { get; set; }
         [JsonProperty("name_ch")]
-        public string Name_Ch { get; set; }
+        public string NameCh { get; set; }
         [JsonProperty("icon")]
         public string Icon { get; set; }
         [JsonProperty("level", NullValueHandling = NullValueHandling.Ignore)]
@@ -38,21 +38,21 @@ namespace XIVDB.Model
         [JsonProperty("classjob", NullValueHandling = NullValueHandling.Ignore)]
         public int? ClassJob { get; set; }
         [JsonProperty("class_name")]
-        public string Class_Name { get; set; }
+        public string ClassName { get; set; }
         [JsonProperty("url")]
         public string Url { get; set; }
         [JsonProperty("url_api")]
-        public string Url_Api { get; set; }
+        public string UrlApi { get; set; }
         [JsonProperty("url_xivdb")]
-        public string Url_Xivdb { get; set; }
+        public string UrlXivdb { get; set; }
         [JsonProperty("url_xivdb_ja")]
-        public string Url_Xivdb_Ja { get; set; }
+        public string UrlXivdbJa { get; set; }
         [JsonProperty("url_xivdb_fr")]
-        public string Url_Xivdb_Fr { get; set; }
+        public string UrlXivdbFr { get; set; }
         [JsonProperty("url_xivdb_de")]
-        public string Url_Xivdb_De { get; set; }
+        public string UrlXivdbDe { get; set; }
         [JsonProperty("url_type")]
-        public string Url_Type { get; set; }
+        public string UrlType { get; set; }
         #endregion
     }
 }

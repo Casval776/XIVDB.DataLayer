@@ -26,55 +26,55 @@ namespace XIVDB.Model
         [JsonProperty("level", NullValueHandling = NullValueHandling.Ignore)]
         public int? Level { get; set; }
         [JsonProperty("level_view", NullValueHandling = NullValueHandling.Ignore)]
-        public int? Level_View { get; set; }
+        public int? LevelView { get; set; }
         [JsonProperty("level_diff", NullValueHandling = NullValueHandling.Ignore)]
-        public int? Level_Diff { get; set; }
+        public int? LevelDiff { get; set; }
         [JsonProperty("item_name")]
-        public string Item_Name { get; set; }
+        public string ItemName { get; set; }
         [JsonProperty("name_ja")]
-        public string Name_Ja { get; set; }
+        public string NameJa { get; set; }
         [JsonProperty("name_en")]
-        public string Name_En { get; set; }
+        public string NameEn { get; set; }
         [JsonProperty("name_fr")]
-        public string Name_Fr { get; set; }
+        public string NameFr { get; set; }
         [JsonProperty("name_de")]
-        public string Name_De { get; set; }
+        public string NameDe { get; set; }
         [JsonProperty("name_ch")]
-        public string Name_Ch { get; set; }
+        public string NameCh { get; set; }
         [JsonProperty("icon")]
         public string Icon { get; set; }
         [JsonProperty("icon_lodestone")]
-        public string Icon_Lodestone { get; set; }
+        public string IconLodestone { get; set; }
         [JsonProperty("item_rarity", NullValueHandling = NullValueHandling.Ignore)]
-        public int? Item_Rarity { get; set; }
+        public int? ItemRarity { get; set; }
         [JsonProperty("class_name")]
-        public string Class_Name { get; set; }
+        public string ClassName { get; set; }
         [JsonProperty("url")]
         public string Url { get; set; }
         [JsonProperty("url_api")]
-        public string Url_Api { get; set; }
+        public string UrlApi { get; set; }
         [JsonProperty("url_xivdb")]
-        public string Url_Xivdb { get; set; }
+        public string UrlXivdb { get; set; }
         [JsonProperty("url_xivdb_ja")]
-        public string Url_Xivdb_Ja { get; set; }
+        public string UrlXivdbJa { get; set; }
         [JsonProperty("url_xivdb_fr")]
-        public string Url_Xivdb_Fr { get; set; }
+        public string UrlXivdbFr { get; set; }
         [JsonProperty("url_xivdb_de")]
-        public string Url_Xivdb_De { get; set; }
+        public string UrlXivdbDe { get; set; }
         [JsonProperty("url_type")]
-        public string Url_Type { get; set; }
+        public string UrlType { get; set; }
         [JsonProperty("color")]
         public string Color { get; set; }
         [JsonProperty("stars", NullValueHandling = NullValueHandling.Ignore)]
         public int? Stars { get; set; }
         [JsonProperty("stars_html")]
-        public string Stars_Html { get; set; }
+        public string StarsHtml { get; set; }
         [JsonProperty("difficulty_factor", NullValueHandling = NullValueHandling.Ignore)]
-        public int? Difficulty_Factor { get; set; }
+        public int? DifficultyFactor { get; set; }
         [JsonProperty("durability_factor", NullValueHandling = NullValueHandling.Ignore)]
-        public int? Durability_Factor { get; set; }
+        public int? DurabilityFactor { get; set; }
         [JsonProperty("quality_factor", NullValueHandling = NullValueHandling.Ignore)]
-        public int? Quality_Factor { get; set; }
+        public int? QualityFactor { get; set; }
         [JsonProperty("difficulty", NullValueHandling = NullValueHandling.Ignore)]
         public int? Difficulty { get; set; }
         [JsonProperty("durability", NullValueHandling = NullValueHandling.Ignore)]

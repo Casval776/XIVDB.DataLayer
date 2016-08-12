@@ -84,7 +84,7 @@ namespace XIVDB
                             results.Enemies = ResponseHelper.Deserialize<Enemy>(deserializedResponse.enemies);
                             break;
                         case ApiConstants.ReturnNode.Fates:
-                            results.FATEs = ResponseHelper.Deserialize<FATE>(deserializedResponse.fates);
+                            results.FATEs = ResponseHelper.Deserialize<Fate>(deserializedResponse.fates);
                             break;
                         case ApiConstants.ReturnNode.Gathering:
                             results.Gathering = ResponseHelper.Deserialize<Gathering>(deserializedResponse.gathering);
@@ -105,7 +105,7 @@ namespace XIVDB
                             results.Mounts = ResponseHelper.Deserialize<Mount>(deserializedResponse.mounts);
                             break;
                         case ApiConstants.ReturnNode.Npcs:
-                            results.NPCs = ResponseHelper.Deserialize<NPC>(deserializedResponse.npcs);
+                            results.NPCs = ResponseHelper.Deserialize<Npc>(deserializedResponse.npcs);
                             break;
                         case ApiConstants.ReturnNode.Places:
                             results.Places = ResponseHelper.Deserialize<Place>(deserializedResponse.places);
