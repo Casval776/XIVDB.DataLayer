@@ -41,7 +41,7 @@ namespace XIVDB.Model
         [JsonProperty("rarity", NullValueHandling = NullValueHandling.Ignore)]
         public int? Rarity { get; set; }
         [JsonProperty("hq")]
-        public bool Hq { get; set; }
+        public bool? Hq { get; set; }
         [JsonProperty("special_bonus_id", NullValueHandling = NullValueHandling.Ignore)]
         public int? SpecialBonusId { get; set; }
         [JsonProperty("series_id", NullValueHandling = NullValueHandling.Ignore)]
@@ -83,25 +83,25 @@ namespace XIVDB.Model
         [JsonProperty("sort_id", NullValueHandling = NullValueHandling.Ignore)]
         public int? SortId { get; set; }
         [JsonProperty("is_unique")]
-        public bool IsUnique { get; set; }
+        public bool? IsUnique { get; set; }
         [JsonProperty("is_untradable")]
-        public bool IsUntradable { get; set; }
+        public bool? IsUntradable { get; set; }
         [JsonProperty("is_legacy")]
-        public bool IsLegacy { get; set; }
+        public bool? IsLegacy { get; set; }
         [JsonProperty("is_dated")]
-        public bool IsDated { get; set; }
+        public bool? IsDated { get; set; }
         [JsonProperty("is_crestable")]
-        public bool IsCrestable { get; set; }
+        public bool? IsCrestable { get; set; }
         [JsonProperty("is_desynthesizable")]
-        public bool IsDesynthesizable { get; set; }
+        public bool? IsDesynthesizable { get; set; }
         [JsonProperty("is_projectable")]
-        public bool IsProjectable { get; set; }
+        public bool? IsProjectable { get; set; }
         [JsonProperty("is_dyeable")]
-        public bool IsDyeable { get; set; }
+        public bool? IsDyeable { get; set; }
         [JsonProperty("is_convertible")]
-        public bool IsConvertible { get; set; }
+        public bool? IsConvertible { get; set; }
         [JsonProperty("is_reducible")]
-        public bool IsReducible { get; set; }
+        public bool? IsReducible { get; set; }
         [JsonProperty("repair_class_id", NullValueHandling = NullValueHandling.Ignore)]
         public int? RepairClassId { get; set; }
         [JsonProperty("repair_item_id", NullValueHandling = NullValueHandling.Ignore)]
@@ -113,15 +113,15 @@ namespace XIVDB.Model
         [JsonProperty("reducible_level", NullValueHandling = NullValueHandling.Ignore)]
         public int? ReducibleLevel { get; set; }
         [JsonProperty("flag_params")]
-        public bool FlagParams { get; set; }
+        public bool? FlagParams { get; set; }
         [JsonProperty("flag_params_count", NullValueHandling = NullValueHandling.Ignore)]
         public int? FlagParamsCount { get; set; }
         [JsonProperty("flag_class_job")]
-        public bool FlagClassJob { get; set; }
+        public bool? FlagClassJob { get; set; }
         [JsonProperty("flag_class_job_count", NullValueHandling = NullValueHandling.Ignore)]
         public int? FlagClassJobCount { get; set; }
         [JsonProperty("flag_instance")]
-        public bool FlagInstance { get; set; }
+        public bool? FlagInstance { get; set; }
         [JsonProperty("flag_instance_count", NullValueHandling = NullValueHandling.Ignore)]
         public int? FlagInstanceCount { get; set; }
         [JsonProperty("flag_instance_chest", NullValueHandling = NullValueHandling.Ignore)]
@@ -129,35 +129,35 @@ namespace XIVDB.Model
         [JsonProperty("flag_instance_chest_count", NullValueHandling = NullValueHandling.Ignore)]
         public int? FlagInstanceChestCount { get; set; }
         [JsonProperty("flag_instance_reward")]
-        public bool FlagInstanceReward { get; set; }
+        public bool? FlagInstanceReward { get; set; }
         [JsonProperty("flag_instance_reward_count", NullValueHandling = NullValueHandling.Ignore)]
         public int? FlagInstanceRewardCount { get; set; }
         [JsonProperty("flag_quest")]
-        public bool FlagQuest { get; set; }
+        public bool? FlagQuest { get; set; }
         [JsonProperty("flag_quest_count", NullValueHandling = NullValueHandling.Ignore)]
         public int? FlagQuestCount { get; set; }
         [JsonProperty("flag_enemy")]
-        public bool FlagEnemy { get; set; }
+        public bool? FlagEnemy { get; set; }
         [JsonProperty("flag_enemy_count", NullValueHandling = NullValueHandling.Ignore)]
         public int? FlagEnemyCount { get; set; }
         [JsonProperty("flag_recipe")]
-        public bool FlagRecipe { get; set; }
+        public bool? FlagRecipe { get; set; }
         [JsonProperty("flag_recipe_count", NullValueHandling = NullValueHandling.Ignore)]
         public int? FlagRecipeCount { get; set; }
         [JsonProperty("flag_craftable")]
-        public bool FlagCraftable { get; set; }
+        public bool? FlagCraftable { get; set; }
         [JsonProperty("flag_craftable_count", NullValueHandling = NullValueHandling.Ignore)]
         public int? FlagCraftableCount { get; set; }
         [JsonProperty("flag_shop")]
-        public bool FlagShop { get; set; }
+        public bool? FlagShop { get; set; }
         [JsonProperty("flag_shop_count", NullValueHandling = NullValueHandling.Ignore)]
         public int? FlagShopCount { get; set; }
         [JsonProperty("flag_gathering")]
-        public bool FlagGathering { get; set; }
+        public bool? FlagGathering { get; set; }
         [JsonProperty("flag_gathering_count", NullValueHandling = NullValueHandling.Ignore)]
         public int? FlagGatheringCount { get; set; }
         [JsonProperty("flag_achievement")]
-        public bool FlagAchievement { get; set; }
+        public bool? FlagAchievement { get; set; }
         [JsonProperty("flag_achievement_count", NullValueHandling = NullValueHandling.Ignore)]
         public int? FlagAchievementCount { get; set; }
         [JsonProperty("updated_libra")]
@@ -165,7 +165,7 @@ namespace XIVDB.Model
         [JsonProperty("updated_official")]
         public DateTime? UpdatedOfficial { get; set; }
         [JsonProperty("parsed_lodestone")]
-        public bool ParsedLodestone { get; set; }
+        public bool? ParsedLodestone { get; set; }
         [JsonProperty("parsed_lodestone_time")]
         public DateTime? ParsedLodestoneTime { get; set; }
         [JsonProperty("patch", NullValueHandling = NullValueHandling.Ignore)]
