@@ -18,7 +18,7 @@ namespace XIVDB.Model
     {
         #region Properties
         [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
-        public int Id { get; set; }
+        public int? Id { get; set; }
         [JsonProperty("name")]
         public string Name { get; set; }
         [JsonProperty("name_ja")]
@@ -32,13 +32,13 @@ namespace XIVDB.Model
         [JsonProperty("name_ch")]
         public string Name_Ch { get; set; }
         [JsonProperty("level", NullValueHandling = NullValueHandling.Ignore)]
-        public int Level { get; set; }
+        public int? Level { get; set; }
         [JsonProperty("level_sync", NullValueHandling = NullValueHandling.Ignore)]
-        public int Level_Sync { get; set; }
+        public int? Level_Sync { get; set; }
         [JsonProperty("item_level", NullValueHandling = NullValueHandling.Ignore)]
-        public int Item_Level { get; set; }
+        public int? Item_Level { get; set; }
         [JsonProperty("item_level_sync", NullValueHandling = NullValueHandling.Ignore)]
-        public int Item_Level_Sync { get; set; }
+        public int? Item_Level_Sync { get; set; }
         [JsonProperty("content_name")]
         public string Content_Name { get; set; }
         [JsonProperty("url")]

@@ -18,17 +18,17 @@ namespace XIVDB.Model
     {
         #region Properties
         [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
-        public int Id { get; set; }
+        public int? Id { get; set; }
         [JsonProperty("name")]
         public string Name { get; set; }
         [JsonProperty("classjob", NullValueHandling = NullValueHandling.Ignore)]
-        public int ClassJob { get; set; }
+        public int? ClassJob { get; set; }
         [JsonProperty("level", NullValueHandling = NullValueHandling.Ignore)]
-        public int Level { get; set; }
+        public int? Level { get; set; }
         [JsonProperty("level_view", NullValueHandling = NullValueHandling.Ignore)]
-        public int Level_View { get; set; }
+        public int? Level_View { get; set; }
         [JsonProperty("level_diff", NullValueHandling = NullValueHandling.Ignore)]
-        public int Level_Diff { get; set; }
+        public int? Level_Diff { get; set; }
         [JsonProperty("item_name")]
         public string Item_Name { get; set; }
         [JsonProperty("name_ja")]
@@ -46,7 +46,7 @@ namespace XIVDB.Model
         [JsonProperty("icon_lodestone")]
         public string Icon_Lodestone { get; set; }
         [JsonProperty("item_rarity", NullValueHandling = NullValueHandling.Ignore)]
-        public int Item_Rarity { get; set; }
+        public int? Item_Rarity { get; set; }
         [JsonProperty("class_name")]
         public string Class_Name { get; set; }
         [JsonProperty("url")]
@@ -66,21 +66,21 @@ namespace XIVDB.Model
         [JsonProperty("color")]
         public string Color { get; set; }
         [JsonProperty("stars", NullValueHandling = NullValueHandling.Ignore)]
-        public int Stars { get; set; }
+        public int? Stars { get; set; }
         [JsonProperty("stars_html")]
         public string Stars_Html { get; set; }
         [JsonProperty("difficulty_factor", NullValueHandling = NullValueHandling.Ignore)]
-        public int Difficulty_Factor { get; set; }
+        public int? Difficulty_Factor { get; set; }
         [JsonProperty("durability_factor", NullValueHandling = NullValueHandling.Ignore)]
-        public int Durability_Factor { get; set; }
+        public int? Durability_Factor { get; set; }
         [JsonProperty("quality_factor", NullValueHandling = NullValueHandling.Ignore)]
-        public int Quality_Factor { get; set; }
+        public int? Quality_Factor { get; set; }
         [JsonProperty("difficulty", NullValueHandling = NullValueHandling.Ignore)]
-        public int Difficulty { get; set; }
+        public int? Difficulty { get; set; }
         [JsonProperty("durability", NullValueHandling = NullValueHandling.Ignore)]
-        public int Durability { get; set; }
+        public int? Durability { get; set; }
         [JsonProperty("quality", NullValueHandling = NullValueHandling.Ignore)]
-        public int Quality { get; set; }
+        public int? Quality { get; set; }
         #endregion
     }
 }

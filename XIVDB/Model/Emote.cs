@@ -18,7 +18,7 @@ namespace XIVDB.Model
     {
         #region Properties
         [JsonProperty("id")]
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -42,7 +42,7 @@ namespace XIVDB.Model
         public string Icon { get; set; }
 
         [JsonProperty("emote_category")]
-        public int EmoteCategory { get; set; }
+        public int? EmoteCategory { get; set; }
 
         [JsonProperty("url")]
         public string Url { get; set; }

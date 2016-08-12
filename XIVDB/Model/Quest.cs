@@ -18,7 +18,7 @@ namespace XIVDB.Model
     {
         #region Properties
         [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
-        public int Id { get; set; }
+        public int? Id { get; set; }
         [JsonProperty("name")]
         public string Name { get; set; }
         [JsonProperty("name_ja")]
@@ -32,17 +32,17 @@ namespace XIVDB.Model
         [JsonProperty("name_ch")]
         public string Name_Ch { get; set; }
         [JsonProperty("header_special", NullValueHandling = NullValueHandling.Ignore)]
-        public int Header_Special { get; set; }
+        public int? Header_Special { get; set; }
         [JsonProperty("journal_genre", NullValueHandling = NullValueHandling.Ignore)]
-        public int Journal_Genre { get; set; }
+        public int? Journal_Genre { get; set; }
         [JsonProperty("classjob_category_1", NullValueHandling = NullValueHandling.Ignore)]
-        public int ClassJob_Category_1 { get; set; }
+        public int? ClassJob_Category_1 { get; set; }
         [JsonProperty("classjob_category_2", NullValueHandling = NullValueHandling.Ignore)]
-        public int ClassJob_Category_2 { get; set; }
+        public int? ClassJob_Category_2 { get; set; }
         [JsonProperty("class_level_1", NullValueHandling = NullValueHandling.Ignore)]
-        public int Class_Level_1 { get; set; }
+        public int? Class_Level_1 { get; set; }
         [JsonProperty("class_level_2", NullValueHandling = NullValueHandling.Ignore)]
-        public int Class_Level_2 { get; set; }
+        public int? Class_Level_2 { get; set; }
         [JsonProperty("class_1")]
         public string Class_1 { get; set; }
         [JsonProperty("genre_name")]

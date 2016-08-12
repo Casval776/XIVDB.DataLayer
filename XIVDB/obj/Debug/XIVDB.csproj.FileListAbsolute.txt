@@ -17,3 +17,13 @@ C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\log4net.xml
 C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIVDB.dll.config
 C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\bin\Debug\XIVDB.dll
 C:\Users\grans\Source\Repos\XIVDB-DataLayer\XIVDB\obj\Debug\XIVDB.dll
+C:\Source\XIVDB.DataLayer\XIVDB\bin\Debug\XIVDB.dll.config
+C:\Source\XIVDB.DataLayer\XIVDB\bin\Debug\XIVDB.dll
+C:\Source\XIVDB.DataLayer\XIVDB\bin\Debug\XIVDB.pdb
+C:\Source\XIVDB.DataLayer\XIVDB\bin\Debug\log4net.dll
+C:\Source\XIVDB.DataLayer\XIVDB\bin\Debug\Newtonsoft.Json.dll
+C:\Source\XIVDB.DataLayer\XIVDB\bin\Debug\log4net.xml
+C:\Source\XIVDB.DataLayer\XIVDB\bin\Debug\Newtonsoft.Json.xml
+C:\Source\XIVDB.DataLayer\XIVDB\obj\Debug\XIVDB.csprojResolveAssemblyReference.cache
+C:\Source\XIVDB.DataLayer\XIVDB\obj\Debug\XIVDB.dll
+C:\Source\XIVDB.DataLayer\XIVDB\obj\Debug\XIVDB.pdb

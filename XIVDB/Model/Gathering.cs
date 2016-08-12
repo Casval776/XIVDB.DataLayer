@@ -18,7 +18,7 @@ namespace XIVDB.Model
     {
         #region Properties
         [JsonProperty("id")]
-        public int id { get; set; }
+        public int? id { get; set; }
         [JsonProperty("name")]
         public string name { get; set; }
         [JsonProperty("name_ja")]
@@ -32,21 +32,21 @@ namespace XIVDB.Model
         [JsonProperty("name_ch")]
         public string name_ch { get; set; }
         [JsonProperty("item")]
-        public int item { get; set; }
+        public int? item { get; set; }
         [JsonProperty("level")]
-        public int level { get; set; }
+        public int? level { get; set; }
         [JsonProperty("level_view")]
-        public int level_view { get; set; }
+        public int? level_view { get; set; }
         [JsonProperty("level_diff")]
-        public int level_diff { get; set; }
+        public int? level_diff { get; set; }
         [JsonProperty("type_name")]
         public string type_name { get; set; }
         [JsonProperty("item_level_equip")]
-        public int item_level_equip { get; set; }
+        public int? item_level_equip { get; set; }
         [JsonProperty("item_level_item")]
-        public int item_level_item { get; set; }
+        public int? item_level_item { get; set; }
         [JsonProperty("rarity")]
-        public int rarity { get; set; }
+        public int? rarity { get; set; }
         [JsonProperty("icon")]
         public string icon { get; set; }
         [JsonProperty("icon_lodestone")]
@@ -68,7 +68,7 @@ namespace XIVDB.Model
         [JsonProperty("color")]
         public string color { get; set; }
         [JsonProperty("stars")]
-        public int stars { get; set; }
+        public int? stars { get; set; }
         [JsonProperty("stars_html")]
         public string stars_html { get; set; }
         #endregion

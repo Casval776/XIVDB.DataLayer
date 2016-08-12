@@ -18,7 +18,7 @@ namespace XIVDB.Model
     {
         #region Properties
         [JsonProperty("id")]
-        public int id { get; set; }
+        public int? id { get; set; }
         [JsonProperty("name")]
         public string name { get; set; }
         [JsonProperty("name_ja")]

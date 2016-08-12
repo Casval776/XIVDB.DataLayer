@@ -18,7 +18,7 @@ namespace XIVDB.Model
     {
         #region Properties
         [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
-        public int Id { get; set; }
+        public int? Id { get; set; }
         [JsonProperty("name")]
         public string Name { get; set; }
         [JsonProperty("name_ja")]
@@ -34,9 +34,9 @@ namespace XIVDB.Model
         [JsonProperty("icon")]
         public string Icon { get; set; }
         [JsonProperty("level", NullValueHandling = NullValueHandling.Ignore)]
-        public int Level { get; set; }
+        public int? Level { get; set; }
         [JsonProperty("classjob", NullValueHandling = NullValueHandling.Ignore)]
-        public int ClassJob { get; set; }
+        public int? ClassJob { get; set; }
         [JsonProperty("class_name")]
         public string Class_Name { get; set; }
         [JsonProperty("url")]

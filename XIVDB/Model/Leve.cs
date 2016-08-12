@@ -18,7 +18,7 @@ namespace XIVDB.Model
     {
         #region Properties
         [JsonProperty("id")]
-        public int id { get; set; }
+        public int? id { get; set; }
         [JsonProperty("name")]
         public string name { get; set; }
         [JsonProperty("name_ja")]
@@ -32,7 +32,7 @@ namespace XIVDB.Model
         [JsonProperty("name_ch")]
         public string name_ch { get; set; }
         [JsonProperty("class_level")]
-        public int class_level { get; set; }
+        public int? class_level { get; set; }
         [JsonProperty("assignment_type_name")]
         public string assignment_type_name { get; set; }
         [JsonProperty("assignment_type_icon")]
@@ -56,7 +56,7 @@ namespace XIVDB.Model
         [JsonProperty("icon_map")]
         public string icon_map { get; set; }
         [JsonProperty("icon_map_size")]
-        public int icon_map_size { get; set; }
+        public int? icon_map_size { get; set; }
         #endregion
     }
 }

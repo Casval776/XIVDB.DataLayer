@@ -29,51 +29,51 @@ namespace XIVDB.Model
         [JsonProperty("plural")]
         public string Plural { get; set; }
         [JsonProperty("class_job_category", NullValueHandling = NullValueHandling.Ignore)]
-        public int ClassJobCategory { get; set; }
+        public int? ClassJobCategory { get; set; }
         [JsonProperty("max_quantity", NullValueHandling = NullValueHandling.Ignore)]
-        public int MaxQuantity { get; set; }
+        public int? MaxQuantity { get; set; }
         [JsonProperty("action", NullValueHandling = NullValueHandling.Ignore)]
-        public int Action { get; set; }
+        public int? Action { get; set; }
         [JsonProperty("level_equip", NullValueHandling = NullValueHandling.Ignore)]
-        public int LevelEquip { get; set; }
+        public int? LevelEquip { get; set; }
         [JsonProperty("level_item", NullValueHandling = NullValueHandling.Ignore)]
-        public int LevelItem { get; set; }
+        public int? LevelItem { get; set; }
         [JsonProperty("rarity", NullValueHandling = NullValueHandling.Ignore)]
-        public int Rarity { get; set; }
+        public int? Rarity { get; set; }
         [JsonProperty("hq")]
         public bool HQ { get; set; }
         [JsonProperty("special_bonus_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int SpecialBonusId { get; set; }
+        public int? SpecialBonusId { get; set; }
         [JsonProperty("series_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int SeriesId { get; set; }
+        public int? SeriesId { get; set; }
         [JsonProperty("slot", NullValueHandling = NullValueHandling.Ignore)]
-        public int Slot { get; set; }
+        public int? Slot { get; set; }
         [JsonProperty("slot_equip", NullValueHandling = NullValueHandling.Ignore)]
-        public int SlotEquip { get; set; }
+        public int? SlotEquip { get; set; }
         [JsonProperty("kind_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int KindId { get; set; }
+        public int? KindId { get; set; }
         [JsonProperty("category_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int CategoryId { get; set; }
+        public int? CategoryId { get; set; }
         [JsonProperty("price", NullValueHandling = NullValueHandling.Ignore)]
-        public int Price { get; set; }
+        public int? Price { get; set; }
         [JsonProperty("price_min", NullValueHandling = NullValueHandling.Ignore)]
-        public int PriceMin { get; set; }
+        public int? PriceMin { get; set; }
         [JsonProperty("price_sell", NullValueHandling = NullValueHandling.Ignore)]
-        public int PriceSell { get; set; }
+        public int? PriceSell { get; set; }
         [JsonProperty("price_sell_hq", NullValueHandling = NullValueHandling.Ignore)]
-        public int PriceSellHQ { get; set; }
+        public int? PriceSellHQ { get; set; }
         [JsonProperty("mirage_item_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int MirageItemId { get; set; }
+        public int? MirageItemId { get; set; }
         [JsonProperty("icon_local", NullValueHandling = NullValueHandling.Ignore)]
-        public int IconLocal { get; set; }
+        public int? IconLocal { get; set; }
         [JsonProperty("icon_lodestone")]
         public string IconLodestone { get; set; }
         [JsonProperty("icon_lodestone_hq")]
         public string IconLodestoneHQ { get; set; }
         [JsonProperty("salvage", NullValueHandling = NullValueHandling.Ignore)]
-        public int Salvage { get; set; }
+        public int? Salvage { get; set; }
         [JsonProperty("materia_slots", NullValueHandling = NullValueHandling.Ignore)]
-        public int MateriaSlots { get; set; }
+        public int? MateriaSlots { get; set; }
         [JsonProperty("materialize_type")]
         public string MaterializeType { get; set; }
         [JsonProperty("lodestone_type")]
@@ -81,7 +81,7 @@ namespace XIVDB.Model
         [JsonProperty("lodestone_id")]
         public string LodestoneId { get; set; }
         [JsonProperty("sort_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int SortId { get; set; }
+        public int? SortId { get; set; }
         [JsonProperty("is_unique")]
         public bool IsUnique { get; set; }
         [JsonProperty("is_untradable")]
@@ -103,81 +103,81 @@ namespace XIVDB.Model
         [JsonProperty("is_reducible")]
         public bool IsReducible { get; set; }
         [JsonProperty("repair_class_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int RepairClassId { get; set; }
+        public int? RepairClassId { get; set; }
         [JsonProperty("repair_item_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int RepairItemId { get; set; }
+        public int? RepairItemId { get; set; }
         [JsonProperty("repair_cost", NullValueHandling = NullValueHandling.Ignore)]
-        public int RepairCost { get; set; }
+        public int? RepairCost { get; set; }
         [JsonProperty("reducible_class_id", NullValueHandling = NullValueHandling.Ignore)]
-        public int ReducibleClassId { get; set; }
+        public int? ReducibleClassId { get; set; }
         [JsonProperty("reducible_level", NullValueHandling = NullValueHandling.Ignore)]
-        public int ReducibleLevel { get; set; }
+        public int? ReducibleLevel { get; set; }
         [JsonProperty("flag_params")]
         public bool FlagParams { get; set; }
         [JsonProperty("flag_params_count", NullValueHandling = NullValueHandling.Ignore)]
-        public int FlagParamsCount { get; set; }
+        public int? FlagParamsCount { get; set; }
         [JsonProperty("flag_class_job")]
         public bool FlagClassJob { get; set; }
         [JsonProperty("flag_class_job_count", NullValueHandling = NullValueHandling.Ignore)]
-        public int FlagClassJobCount { get; set; }
+        public int? FlagClassJobCount { get; set; }
         [JsonProperty("flag_instance")]
         public bool FlagInstance { get; set; }
         [JsonProperty("flag_instance_count", NullValueHandling = NullValueHandling.Ignore)]
-        public int FlagInstanceCount { get; set; }
+        public int? FlagInstanceCount { get; set; }
         [JsonProperty("flag_instance_chest", NullValueHandling = NullValueHandling.Ignore)]
-        public int FlagInstanceChest { get; set; }
+        public int? FlagInstanceChest { get; set; }
         [JsonProperty("flag_instance_chest_count", NullValueHandling = NullValueHandling.Ignore)]
-        public int FlagInstanceChestCount { get; set; }
+        public int? FlagInstanceChestCount { get; set; }
         [JsonProperty("flag_instance_reward")]
         public bool FlagInstanceReward { get; set; }
         [JsonProperty("flag_instance_reward_count", NullValueHandling = NullValueHandling.Ignore)]
-        public int FlagInstanceRewardCount { get; set; }
+        public int? FlagInstanceRewardCount { get; set; }
         [JsonProperty("flag_quest")]
         public bool FlagQuest { get; set; }
         [JsonProperty("flag_quest_count", NullValueHandling = NullValueHandling.Ignore)]
-        public int FlagQuestCount { get; set; }
+        public int? FlagQuestCount { get; set; }
         [JsonProperty("flag_enemy")]
         public bool FlagEnemy { get; set; }
         [JsonProperty("flag_enemy_count", NullValueHandling = NullValueHandling.Ignore)]
-        public int FlagEnemyCount { get; set; }
+        public int? FlagEnemyCount { get; set; }
         [JsonProperty("flag_recipe")]
         public bool FlagRecipe { get; set; }
         [JsonProperty("flag_recipe_count", NullValueHandling = NullValueHandling.Ignore)]
-        public int FlagRecipeCount { get; set; }
+        public int? FlagRecipeCount { get; set; }
         [JsonProperty("flag_craftable")]
         public bool FlagCraftable { get; set; }
         [JsonProperty("flag_craftable_count", NullValueHandling = NullValueHandling.Ignore)]
-        public int FlagCraftableCount { get; set; }
+        public int? FlagCraftableCount { get; set; }
         [JsonProperty("flag_shop")]
         public bool FlagShop { get; set; }
         [JsonProperty("flag_shop_count", NullValueHandling = NullValueHandling.Ignore)]
-        public int FlagShopCount { get; set; }
+        public int? FlagShopCount { get; set; }
         [JsonProperty("flag_gathering")]
         public bool FlagGathering { get; set; }
         [JsonProperty("flag_gathering_count", NullValueHandling = NullValueHandling.Ignore)]
-        public int FlagGatheringCount { get; set; }
+        public int? FlagGatheringCount { get; set; }
         [JsonProperty("flag_achievement")]
         public bool FlagAchievement { get; set; }
         [JsonProperty("flag_achievement_count", NullValueHandling = NullValueHandling.Ignore)]
-        public int FlagAchievementCount { get; set; }
+        public int? FlagAchievementCount { get; set; }
         [JsonProperty("updated_libra")]
-        public DateTime UpdatedLibra { get; set; }
+        public DateTime? UpdatedLibra { get; set; }
         [JsonProperty("updated_official")]
-        public DateTime UpdatedOfficial { get; set; }
+        public DateTime? UpdatedOfficial { get; set; }
         [JsonProperty("parsed_lodestone")]
         public bool ParsedLodestone { get; set; }
         [JsonProperty("parsed_lodestone_time")]
-        public DateTime ParsedLodestoneTime { get; set; }
+        public DateTime? ParsedLodestoneTime { get; set; }
         [JsonProperty("patch", NullValueHandling = NullValueHandling.Ignore)]
-        public int Patch { get; set; }
+        public int? Patch { get; set; }
         [JsonProperty("category_name")]
         public string CategoryName { get; set; }
         [JsonProperty("category_patch", NullValueHandling = NullValueHandling.Ignore)]
-        public int CategoryPatch { get; set; }
+        public int? CategoryPatch { get; set; }
         [JsonProperty("kind_name")]
         public string KindName { get; set; }
         [JsonProperty("kind_patch", NullValueHandling = NullValueHandling.Ignore)]
-        public int KindPatch { get; set; }
+        public int? KindPatch { get; set; }
         [JsonProperty("url")]
         public string Url { get; set; }
         [JsonProperty("url_xivdb")]
@@ -187,7 +187,7 @@ namespace XIVDB.Model
         [JsonProperty("color")]
         public string Color { get; set; }
         [JsonProperty("icon_size", NullValueHandling = NullValueHandling.Ignore)]
-        public int IconSize { get; set; }
+        public int? IconSize { get; set; }
         [JsonProperty("icon")]
         public string Icon { get; set; }
         [JsonProperty("icon_hq")]
